@@ -1,18 +1,16 @@
 import React from 'react';
-import Header from './header';
-import Footer from './footer';
+import{BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import Home from "./home";
 
-const app = () => {
+
+const App = () => {
     return (
-        <div className="app">
-            <Header></Header>
-            <main>
-                <h1> Welcome to my app! </h1>
-                <p> This is the start of something great!</p>
-            </main>
-            <Footer></Footer>
-        </div>
+        <Router>
+            <Routes>
+                <Route exact path="/" element={<Home/>}/>
+            </Routes>
+        </Router>
     );
 };
 
-export default app;
+export default App;
